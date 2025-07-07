@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  jobfunnel:
+    container_name: jobfunnel
+    image: jobfunnel-local
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./output:/data/output
+    stdin_open: true
+    tty: true
+    restart: "no"
