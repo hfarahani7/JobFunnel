@@ -7,6 +7,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    command: load --config /settings.yaml
     volumes:
       - ./output:/data/output
     stdin_open: true
